@@ -76,7 +76,7 @@ function resultTeaType(){
 	<div class="share-section">
 		<div class="share-background">
 		<div class="share-btn">
-			<button type="button" class="link-btn">LINK</button>
+			<button type="button" class="link-btn" onclick="copyurl()">LINK</button>
 			<button type="button" class="kakao-btn" onclick="kakaoshare()">KAKAOTALK</button>
 		</div>
 		</div>
@@ -84,6 +84,34 @@ function resultTeaType(){
 	</div>
 </section>
 <script type="text/javascript">
+function copyurl(){
+	
+	let cururl = window.location.href; // 변수에 현재 url 저장
+	
+
+	const tempurl = document.createElement('textarea'); // textarea 생성 
+	tempurl.value = cururl;
+	
+	document.body.appendChild(tempurl); // body랑 이어줌
+	tempurl.select();//tempurl 선택
+	
+	document.execCommand('copy'); //메서드를 사용하여 선택한 텍스트를 클립보드에 복사
+	document.body.removeChild(tempurl);// 클립보드에 저장하려고 생성했으니 삭제함
+	
+	window.alert('복사완료 수정 예정');
+	
+	
+	/* 최신 브라우저 지원
+	navigator.clipboard.writeText(cururl)
+	  .then(() => {
+	    alert('URL이 클립보드에 복사되었습니다.');
+	  })
+	  .catch((error) => {
+	    console.error('클립보드 복사 실패:', error);
+	  });
+	*/
+}
+
 function kakaoshare(){
 	if (!Kakao.isInitialized()) {//초기화 조건문
 		Kakao.init('848c58e1abe50132facad3254e2ceb7e');
