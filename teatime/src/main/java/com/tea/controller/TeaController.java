@@ -34,5 +34,8 @@ public class TeaController {
 		return mav;
 	}
 	*/
-	
+	@RequestMapping("/questions")
+	public String questions() {
+		return "question/questions";
+	}
 }
