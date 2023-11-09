@@ -9,8 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/index.css" />
-<link rel="stylesheet" href="/css/qna.css" />
+<link rel="shortcut icon" href="#"/>
 <title>teatime_test</title>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script type="text/javascript">
 //channelTalk api start
 (function(){
@@ -76,11 +77,21 @@ function resultTeaType(){
 		<div class="share-background">
 		<div class="share-btn">
 			<button type="button" class="link-btn">LINK</button>
-			<button type="button" class="kakao-btn">KAKAOTALK</button>
+			<button type="button" class="kakao-btn" onclick="kakaoshare()">KAKAOTALK</button>
 		</div>
 		</div>
 	</div>
 	</div>
 </section>
+<script type="text/javascript">
+function kakaoshare(){
+	if (!Kakao.isInitialized()) {//초기화 조건문
+		Kakao.init('848c58e1abe50132facad3254e2ceb7e');
+	}
+    Kakao.Link.sendCustom({
+        templateId: 100356
+    });
+}
+</script>
 </body>
 </html>
