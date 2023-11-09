@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/index.css" />
+<link rel="stylesheet" href="/resources/css/index.css" />
 <link rel="shortcut icon" href="#"/>
 <title>teatime_test</title>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
